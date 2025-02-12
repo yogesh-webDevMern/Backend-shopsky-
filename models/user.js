@@ -6,23 +6,11 @@ mongoose.connect(process.env.MONGODB_URI, {
   // console.log(process.env.MONGODB_URI); 
 
 const userSchema=mongoose.Schema({
-    name:{
-      type:String
-    },
-    email:{
-      type:String,
-    },
-    image:{
-      type:String,
-    },
-    contact:{
-      type:Number,
-    },
-    gender:{
-      type:String,
-    },
-    age:{
-      type:Number,
-    }
+    name:String,
+    email:String,
+    image:String,
+    contact:Number,
+    gender:String,
+    age:Number
 })
 module.exports=mongoose.model("user",userSchema);
