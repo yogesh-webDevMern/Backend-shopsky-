@@ -20,13 +20,13 @@
             <div class="img bg-red-200 w-[100%] overflow-hidden rounded-md h-[120px]">
                 <img width="100%" class="object-cover" height="100%" src="<%= user.image %>" alt="">
             </div>
-            <h3 class="text-[14px] mt-3">Name :<%= user.name %></h3>
-            <h3 class="text-[12px]">Email :<%= user.email %></h3>
-            <h3 class="text-[12px]">Gender :<%= user.gender%></h3>
-            <h3 class="text-[12px]">Contact :<%= user.contact%></h3>
-            <h3 class="text-[12px]">age :<% user.age%></h3>
+            <h3 class="text-[14px] mt-3">Name : <%= user.name %></h3>
+            <h3 class="text-[12px]">Email : <%= user.email %></h3>
+            <h3 class="text-[12px]">Gender : <%= user.gender%></h3>
+            <h3 class="text-[12px]">Contact : <%= user.contact%></h3>
+            <h3 class="text-[12px]">age : <%= user.age%></h3>
             <div class="buttons flex justify-between items-center">
-                <a href="" class="bg-gradient-to-r from-blue-500 to-purple-500  px-2 text-[14px] text-white mt-2 py-[2px] rounded-md block " >Edit</a>
+                <a href="/edit/<%= user._id %>" class="bg-gradient-to-r from-blue-500 to-purple-500  px-2 text-[14px] text-white mt-2 py-[2px] rounded-md block " >Edit</a>
                 <a href="/delete/<%= user._id %>" class="bg-gradient-to-r from-blue-500 to-purple-500 px-2 text-[14px] text-white mt-2 py-[2px] rounded-md block " >Delete</a>
             </div>
                   

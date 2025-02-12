@@ -11,11 +11,11 @@
     <div class="main max-w-[100%] text-white min-h-screen bg-zinc-900 p-10">
         <h1 class="mb-5">Create a user...</h1>
         <form action="/create" method="post">
-        <input type="text" class="outline-none mt-5 w-full md:w-[300px] md:mt-0 bg-zinc-700 px-4 py-1 rounded-md" placeholder="Enter the name of user" name="name">
-        <input type="email" class="outline-none mt-5 w-full md:w-[400px] md:mt-0 bg-zinc-700 px-4 py-1 rounded-md" placeholder="Enter the email of user" name="email">
-        <input type="text" class="outline-none mt-5 w-full md:w-[420px] md:mt-0 bg-zinc-700 px-4 py-1 rounded-md" placeholder="Enter the image url" name="image">
-        <input type="tel" pattern="[0-9]{10}"  class="mt-5 w-full md:w-[310px] mb-5 block md:inline md:mt-0 outline-none bg-zinc-700 px-4 py-1 rounded-md" placeholder="Enter the contact number of user" name="contact">
-        <label for="male" class="inline-block md:inline">
+        <input type="text" class="outline-none mt-5 w-full md:w-[300px] md:mt-0 bg-zinc-700 px-4 py-1 rounded-md" placeholder="Enter the name of user" name="name" required>
+        <input type="email" class="outline-none mt-5 w-full md:w-[400px] md:mt-0 bg-zinc-700 px-4 py-1 rounded-md" placeholder="Enter the email of user" name="email" required>
+        <input type="text" class="outline-none mt-5 w-full md:w-[420px] md:mt-0 bg-zinc-700 px-4 py-1 rounded-md" placeholder="Enter the image url" name="image" required>
+        <input type="tel" pattern="[0-9]{10}"  class="mt-5 w-full md:w-[310px] mb-5 block md:inline md:mt-0 outline-none bg-zinc-700 px-4 py-1 rounded-md" placeholder="Enter the contact number of user" name="contact" required>
+        <label for="male" class="inline-block md:inline" >
             <input type="radio" id="male" name="gender"  value="male" required> Male
         </label>
         
@@ -26,7 +26,7 @@
         <label for="other" class="ml-3">
             <input type="radio" id="other" name="gender" value="other" required> Other
         </label>
-        <input type="number" class="outline-none mt-5 w-full md:ml-3 md:w-[200px] md:mt-0 bg-zinc-700 px-4 py-1 rounded-md" placeholder="Enter the age of user" name="age">
+        <input type="number" class="outline-none mt-5 w-full md:ml-3 md:w-[200px] md:mt-0 bg-zinc-700 px-4 py-1 rounded-md" placeholder="Enter the age of user" name="age" required>
         <button class="bg-gradient-to-r from-blue-500 to-purple-500 px-3 py-1 rounded-md block mt-5" >Submit</button>
        </form>
        <a href="/show" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500  px-3 py-1 mt-20 rounded-md inline-block">See the users</a>
