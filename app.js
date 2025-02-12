@@ -35,7 +35,7 @@ app.get("/delete/:id",async(req,res)=>
  let deleteuser = await userModel.findOneAndDelete({_id:req.params.id});
 res.redirect("/show");
 })
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
