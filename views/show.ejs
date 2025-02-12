@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopSky</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="main max-w-[100%] min-h-screen bg-zinc-900 p-10">
+        <h1 class="mb-5 text-white">Users</h1>
+    <div class="main-box  flex gap-[30px] items-center flex-wrap">
+
+ <% if(users.length>0)
+ {%>
+<% users.forEach((user)=>
+{%>
+        <div class="box mx-auto md:mx-0 mt-5 md:mt-0 md:w-[18%] h-[300px] rounded-md bg-white px-5 py-8">
+            <div class="img bg-red-200 w-[100%] overflow-hidden rounded-md h-[120px]">
+                <img width="100%" class="object-cover" height="100%" src="<%= user.image %>" alt="">
+            </div>
+            <h3 class="text-[14px] mt-3">Name :<%= user.name %></h3>
+            <h3 class="text-[12px]">Email :<%= user.email %></h3>
+            <h3 class="text-[12px]">Gender :<%= user.gender%></h3>
+            <h3 class="text-[12px]">Contact :<%= user.contact%></h3>
+            <h3 class="text-[12px]">age :<% user.age%></h3>
+            <div class="buttons flex justify-between items-center">
+                <a href="" class="bg-gradient-to-r from-blue-500 to-purple-500  px-2 text-[14px] text-white mt-2 py-[2px] rounded-md block " >Edit</a>
+                <a href="/delete/<%= user._id %>" class="bg-gradient-to-r from-blue-500 to-purple-500 px-2 text-[14px] text-white mt-2 py-[2px] rounded-md block " >Delete</a>
+            </div>
+                  
+    </div>
+<%}) %>
+ <%}
+ else
+ {%>
+<h1 class="text-white">No tasks yet...</h1>
+ <%}
+  %>
+</div>
+
+       <a href="/" class="bg-gradient-to-r from-purple-500 to-pink-500 absolute top-[-50px] text-white right-[30px] hover:from-pink-500  px-3 py-1 mt-20 rounded-md inline-block">Go back to Home</a>
+</div>
+</body>
+</html>
